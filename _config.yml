@@ -1,21 +1,43 @@
+# Site settings
 title: CheolJun Park
-description: >
-  CheolJun Park
-    - KAIST EE PhD Student @SYSEC Lab
-#copyright: Untitled
+description: 'CheolJun Park - Ph.D student @ EE KAIST'
+url: 'https://unrloay2/github.io'
+baseurl: '/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'CheolJun Park'
+  email: josh@joshgerdes.com
+  instagram_username : cheoljjjun
+  github_username:  unrloay2
+  facebook_username: cheoljun.park.1
+#  linkedin_username:  
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
 sass:
-  sass_dir: assets/sass
-url: http://unrloay2.github.io
-disqus_shortname: 
-facebook_username: cheoljun.park.1
-#twitter_username: "#"
-#linkedin_username: "#"
-instagram_username: cheoljjjun
-#pinterest_username:
-#flickr_username:
-github_username: unrloay2 "#"
-#feed_icon: rss
-email: fermioncj@mkaist.ac.kr "#"
-gems: [jekyll-paginate]
-paginate_path: "/page/:num/"
-paginate: 6
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']

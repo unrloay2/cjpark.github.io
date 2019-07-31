@@ -1,20 +1,20 @@
 ---
 layout: null
 sitemap:
-  exclude: true
+exclude: 'yes'
 ---
-/* THANKS */
-  Jekyll Development: David Forster
-  Twitter: @DavidForster
-  Web: http://davidforster.com
-  From: Aylesbury, United Kingdom
 
-  Design: AJ
-  Twitter: @n33co
-  Web: http://html5up.net
-  From: Nashville, United States
+/* TEAM */
+Developer & Designer: Josh Gerdes
+Twitter: @joshgerdes
+Site: http://joshgerdes.com
+Location: Minneapolis, MN, USA
+						
+/* THANKS */
+Name: Dale Anthony
 
 /* SITE */
-  Last Update: {{ site.time }}
-  Generator: Jekyll v{{ jekyll.version }} (http://jekyllrb.com)
-  IDE: Atom (https://atom.io)
+Last update: {{ site.time | date: "%Y/%m/%d" }}
+Standards: HTML5, CSS3
+Components: Jekyll
+Software: Sublime Text, Photoshop

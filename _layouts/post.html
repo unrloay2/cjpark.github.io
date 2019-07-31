@@ -1,61 +1,20 @@
-<!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-  <head>
-    {% include head.html %}
-    {% include opengraph.html %}
-    {% include twittercard.html %}
-  </head>
-	<body id="top">
-
-		{% include header.html %}
-
-		<!-- Main -->
-		<div id="main">
-      <article>
-        <header class="major">
-          <h2>{{ page.title }}</h2>
-          <p>
-            <i class="fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }}{% if page.categories %} on <i class="fa fa-tags"></i> {{ page.categories | array_to_sentence_string }}.{% endif %}
-            {% include readingtime.html %}
-          </p>
-        </header>
-
-        <section>
-          {{ content }}
-        </section>
-      </article>
-
-      {% include disqus.html %}
-
-      {% if page.previous.url or page.next.url %}
-      <hr />
-      <div class="row">
-        <article class="6u 12u$(xsmall) work-item">
-          {% if page.previous.url %}
-          <p>Previous</p>
-  				<h3><a href="{{ page.previous.url }}">{{page.previous.title}}</a></h3>
-  				<p>{{ page.previous.excerpt | strip_html }}</p>
-          {% endif %}
-  			</article>
-  			<article class="6u$ 12u$(xsmall) work-item">
-          {% if page.next.url %}
-          <p>Next</p>
-  				<h3><a href="{{ page.next.url }}">{{page.next.title}}</a></h3>
-  				<p>{{ page.next.excerpt | strip_html }}</p>
-          {% endif %}
-  			</article>
-      </div>
+---
+layout: default
+---
+<article class="post-container post-container--single">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date: "%Y-%m-%d %H:%M" }}" class="post-meta__date date">{{ page.date | date: "%-d %b %Y" }}</time>
+      {% if page.tags.size > 0 %}
+      &#8226; <span class="post-meta__tags">on {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}</span>
       {% endif %}
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
 
-		</div>
-
-    {% include footer.html %}
-    {% include scripts.html %}
-
-	</body>
-</html>
+  <section class="post">
+    {{ content }}
+  </section>
+  {% if page.comments != false and site.disqus_shortname %}<section id="disqus_thread"></section><!-- /#disqus_thread -->{% endif %}
+</article>
+{% if page.comments != false %}{% include disqus.html %}{% endif %}
