@@ -1,19 +1,19 @@
 title: CheolJun Park
 description: >
   PhD Student
-copyright: Untitled
+#copyright: Untitled
 sass:
   sass_dir: assets/sass
 url: http://unrloay2.github.io
 disqus_shortname: 
-facebook_username:
-twitter_username: "#"
-linkedin_username: "#"
+facebook_username: cheoljun.park.1
+#twitter_username: "#"
+#linkedin_username: "#"
 instagram_username: cheoljjjun
-pinterest_username:
-flickr_username:
+#pinterest_username:
+#flickr_username:
 github_username: unrloay2 "#"
-feed_icon: rss
+#feed_icon: rss
 email: fermioncj@mkaist.ac.kr "#"
 gems: [jekyll-paginate]
 paginate_path: "/page/:num/"
