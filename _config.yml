@@ -1,0 +1,42 @@
+# Site settings
+title: CheolJun Park
+description: 'Ph.D Student </br> Hardware Engineer · Being Software Engineer </br> #limitless'
+url: 'http://urnloay2.github.io'
+baseurl: '/'
+google_analytics: ''
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'CheolJun Park'
+  email: fermioncj@kaist.ac.kr
+#  twitter_username: _javierbravo_
+  github_username:  unrloay2
+#  linkedin_username:  javibravo
+  instagram_username:  cheoljjjun
+  facebook_username: cheoljun.park.1
+  show_blog: False
+  show_rss: False
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
